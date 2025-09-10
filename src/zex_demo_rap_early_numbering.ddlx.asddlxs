@@ -1,0 +1,51 @@
+@Metadata.layer: #CORE
+
+@Search.searchable:true
+
+@UI:{ headerInfo:{
+      typeName:'EarlyNumbering App',
+      typeNamePlural:'Total Entries',
+      title: {
+        type: #STANDARD,
+        label: 'Current Entry',
+        value: 'Id'
+        }
+      }
+      }
+
+annotate view ZI_DEMO_RAP_ERALY_NUMBERING with
+{
+
+  @UI:{ facet:[  {
+      id: 'DataEntry',
+      purpose: #STANDARD,
+      position: 10,
+      label:'currentEntry',
+      type:#IDENTIFICATION_REFERENCE
+  } ]
+
+  }
+
+
+  //Field 1: Id
+  @UI:{ lineItem:[ { position: 10 } ] ,
+        identification: [{ position: 10  }]}
+
+  @Search.defaultSearchElement: true
+  @EndUserText.label: 'Id'
+  Id;
+
+  //Field 2: Name
+  @UI:{ lineItem:[ { position: 20 } ] ,
+        identification: [{ position: 20 }]}
+
+  @EndUserText.label:'Name'
+  Name;
+
+  //Field 3: Age
+  @UI:{ lineItem:[ { position: 30 } ] ,
+        identification: [{ position: 30 }]}
+  @EndUserText.label: 'Age'
+  Age;
+
+}

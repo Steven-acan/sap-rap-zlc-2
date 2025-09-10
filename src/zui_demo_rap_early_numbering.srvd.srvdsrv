@@ -1,0 +1,4 @@
+@EndUserText.label: 'Z DEMO_RAP_EARLY_NUMBERING'
+define service ZUI_demo_rap_early_numbering {
+  expose ZI_DEMO_RAP_ERALY_NUMBERING;
+}

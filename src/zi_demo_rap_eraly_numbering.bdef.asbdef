@@ -1,0 +1,22 @@
+managed implementation in class zbp_i_demo_rap_eraly_numbering unique;
+strict ( 2 );
+
+define behavior for ZI_DEMO_RAP_ERALY_NUMBERING //alias <alias_name>
+persistent table ztb_early_number
+lock master
+early numbering //implemented by method earlynumbering_create
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) Id;
+
+  mapping for ztb_early_number
+    {
+      Age     = age;
+      Id      = nameid;
+      Name    = nametext;
+    }
+}
